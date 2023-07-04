@@ -33,8 +33,8 @@ fun Animation() {
         mutableStateOf(true)
     }
 
-    LaunchedEffect(key1 = currentFrame, key2 = isRunning) {
-        delay(66)
+    LaunchedEffect(key1 = currentFrame.value, key2 = isRunning.value) {
+        delay(30)
         if(
             (currentFrame.value > 150 || isForward.value) &&
             (currentFrame.value < 180 || !isForward.value) &&
